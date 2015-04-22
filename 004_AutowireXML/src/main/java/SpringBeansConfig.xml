@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	
+
+	<bean id="adres" class="com.mimaraslan.Adres">
+		<property name="acikAdresBilgisi" value="Adana Adana Adana"/>
+	</bean>
+	
+	
+	<bean id="ogrenci" class="com.mimaraslan.Ogrenci" autowire="byName">
+		<property name="adi" value="Burak"/>
+		<property name="soyadi" value="Aslan"/>
+	<!-- 	<property name="adres" ref="adres"/>  -->
+		
+<!-- 		<constructor-arg ref="adres"/>  -->
+			
+		<!-- 	<constructor-arg> 
+				<ref bean="adres"/>	
+			</constructor-arg>
+	 -->
+		
+	</bean>
+	
+	
+	<bean id="adres2" class="com.mimaraslan.Adres">
+		<property name="acikAdresBilgisi" value="Antakya "/>
+	</bean>
+	
+	<bean id="ogrenci2" class="com.mimaraslan.Ogrenci" autowire="byType"  >
+		<property name="adi" value="Mehmet Ali"/>
+		<property name="soyadi" value="Şahinoğulları"/>
+	</bean>
+	
+	
+</beans>
