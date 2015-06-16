@@ -1,0 +1,21 @@
+package com.mimaraslan.service;
+
+import java.util.List;
+
+import com.mimaraslan.model.pojo.entity.Musteri;
+
+public interface MusteriService {
+	
+	    public long createMusteri(Musteri musteri);
+	   
+	    public void deleteMusteri(long musteriId);
+	    
+	    public Musteri updateMusteri(Musteri musteri);
+
+	    public List<Musteri> findAllMusteri();
+
+	    public Musteri findMusteri(long musteriId);
+
+	    public List<Musteri> findMusteriler(String musteriAdi);
+	    
+}
